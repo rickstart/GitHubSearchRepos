@@ -8,5 +8,5 @@ import retrofit2.http.Query;
 
 public interface GitHubAPI {
     @GET("/search/repositories")
-    Call<GitHubResponse> loadRepos(@Query("q") String repoName);
+    Call<GitHubResponse> loadRepos(@Query("q") String repoName ,@Query("sort") String type);
 }

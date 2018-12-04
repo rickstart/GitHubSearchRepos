@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements Callback<GitHubRe
             @Override
             public boolean onQueryTextSubmit(String query) {
                 if (query!=null && !query.equals("")) {
-                    Call<GitHubResponse> call = api.loadRepos(query);
+                    Call<GitHubResponse> call = api.loadRepos(query,"stars");
                     call.enqueue(MainActivity.this);
                     progress.setVisibility(View.VISIBLE);
                 }else{
